@@ -2,15 +2,15 @@ class Api::V1::AppointmentsController < ApplicationController # <- reflects name
 
     def index
         appointments = Appointment.all
-        render json: appointments
+        render json: AppointmentSerializer.new(appointments)
     end
 
     def create
-        appointment = Appointment.new(appointment_params)
+        appointment = Appointment.new(appointment_params) #creates new method / renders data
         if appointment.save
             render json: appointment, status: :accepted
         else
-            render json: {errors: appointment.errors.full_messages), status: :unprocessible_entity
+            render json: {errors: appointment.errors.full_messages}
         end
     end
 

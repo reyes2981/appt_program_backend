@@ -1,3 +1,3 @@
 class Customer < ApplicationRecord
-    has_many :appointments, dependents: :destroy
+    has_many :appointments
 end
