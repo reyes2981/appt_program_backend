@@ -20,4 +20,5 @@ class Api::V1::AppointmentsController < ApplicationController # <- reflects name
         params.require(:appointment).permit(:customer_id, :hairdresser_id, :datetime)
     end
 
+
 end
