@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Appointment.create(customer_id: '1', hairdresser_id: '2')
+Customer.create(name: "noe reyes")
 
