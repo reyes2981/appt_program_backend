@@ -1,5 +1,5 @@
 class Api::V1::AppointmentsController < ApplicationController # <- reflects namespace of route
-
+    
     def index
         appointments = Appointment.all
         render json: AppointmentSerializer.new(appointments)
@@ -13,11 +13,12 @@ class Api::V1::AppointmentsController < ApplicationController # <- reflects name
             render json: {errors: appointment.errors.full_messages}
         end
     end
+    
 
     private
 
     def appointment_params
-        params.require(:appointment).permit(:customer_id, :hairdresser_id, :datetime)
+        params.require(:appointment).permit(:first_name, :datetime) # strong params / "appointment" door - only allow strong params through door and into DB
     end
 
 
