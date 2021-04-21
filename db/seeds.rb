@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Customer.create(name: "noe reyes")
-Appointment.create(customer_id: '1', hairdresser_id: '1')
+Appointment.create(first_name: 'noe', datetime: '04/27/21')
 
 
