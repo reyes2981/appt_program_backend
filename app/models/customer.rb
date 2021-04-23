@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
     has_many :appointments, dependent: :destroy
-    validates :name, presence: true
+    validates :first_name, presence: true
 
 
 

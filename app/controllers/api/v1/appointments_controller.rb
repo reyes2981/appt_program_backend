@@ -8,7 +8,7 @@ class Api::V1::AppointmentsController < ApplicationController # <- reflects name
     def create
         appointment = Appointment.new(appointment_params) #creates new method / renders data
         if appointment.save
-            render json: appointment, status: :accepted
+            render json: AppointmentSerializer.new(appointment), status: :accepted
         else
             render json: {errors: appointment.errors.full_messages}
         end
