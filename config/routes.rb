@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :appointments, only: [:index, :create]
       resources :customers, only: [:index, :create]
+      resources :hairdressers, only: [:index, :create]
+
     end
   end
 end
