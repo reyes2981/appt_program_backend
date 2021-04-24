@@ -1,22 +1,23 @@
-class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
-  
+class Api::V1::CustomersController < ApplicationController
+
+  def index
+    customers = Customer.all
+    render json: CustomerSerializer.new(customers)
+end
+
     def create
-      #byebug
-      @user = User.create(user_params)
-      if @user.valid?
-        # passing encode_token a payload of user id
-        @token = encode_token(user_id: @user.id)
-        render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
+      @customer = Customer.create(customer_params)
+      if @customer.valid?
+        render json: { customer: CustomerSerializer.new(@customer)}, status: :created
       else
-        render json: { error: 'failed to create user' }, status: :not_acceptable
+        render json: { error: 'failed to create customer' }
       end
     end
   
     private
     
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :bio, :image_url)
+    def customer_params
+      params.require(:customer).permit(:first_name, :last_name)
     end
   
   end
