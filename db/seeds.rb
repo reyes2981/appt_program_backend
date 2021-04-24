@@ -8,4 +8,6 @@
 
 Appointment.create(first_name: 'noe', datetime: '04/27/21')
 
+Hairdresser.create!([{ first_name: "Elsa" }, { first_name: "Lucy" }, { first_name: "Margarita" }, { first_name: "Sia" }])
+
 
