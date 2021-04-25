@@ -18,7 +18,7 @@ class Api::V1::AppointmentsController < ApplicationController # <- reflects name
     private
 
     def appointment_params
-        params.require(:appointment).permit(:datetime, :first_name, :last_name, :email, :hairdresser_id) # strong params / "appointment" door - only allow strong params through door and into DB
+        params.require(:appointment).permit(:datetime, :first_name, :last_name, :email, :hairdresser_id, :service_id) # strong params / "appointment" door - only allow strong params through door and into DB
     end
 
 
