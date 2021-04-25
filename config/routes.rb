@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :appointments, only: [:index, :create]
       resources :customers, only: [:index, :create]
       resources :hairdressers, only: [:index, :create]
+      resources :services, only: [:index, :create]
 
     end
   end

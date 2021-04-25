@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_25_162229) do
+ActiveRecord::Schema.define(version: 2021_04_25_163226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,8 +24,10 @@ ActiveRecord::Schema.define(version: 2021_04_25_162229) do
     t.string "email"
     t.string "first_name"
     t.string "last_name"
+    t.bigint "service_id"
     t.index ["customer_id"], name: "index_appointments_on_customer_id"
     t.index ["hairdresser_id"], name: "index_appointments_on_hairdresser_id"
+    t.index ["service_id"], name: "index_appointments_on_service_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -49,4 +51,5 @@ ActiveRecord::Schema.define(version: 2021_04_25_162229) do
   end
 
   add_foreign_key "appointments", "customers"
+  add_foreign_key "appointments", "services"
 end

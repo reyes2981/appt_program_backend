@@ -8,5 +8,6 @@
 
 
 Hairdresser.create!([{ first_name: "Elsa" }, { first_name: "Lucy" }, { first_name: "Margarita" }, { first_name: "Sia" }])
+Service.create!([{ name: "Haircut" }, { name: "Styling" }, { name: "Color" }, { name: "Waxing" }, { name: "Perm" }, { name: "Other" }])
 
 
