@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flatiron School Javascript Project - Cuts 4 Less is built with a Javascript frontend and a Rails API backend. Cuts4Less is a site where users can schedule appointments
 
-Things you may want to cover:
+Blog Post
 
-* Ruby version
+Installation:
 
-* System dependencies
+After cloning the repo, install the dependencies by executing the below command in your terminal:
 
-* Configuration
+$ bundle install
 
-* Database creation
+Launch the system using the below command in your terminal and navigating to your specified local host URL:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ rails server
